@@ -7,56 +7,59 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;padding:20px}
-.header{text-align:center;margin-bottom:30px}
+.header{text-align:center;margin-bottom:28px}
 .header h1{font-size:26px;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.header .sub{font-size:13px;color:#64748b;margin-top:5px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1000px;margin:0 auto}
-.card{background:#1e293b;border-radius:16px;padding:24px;border:1px solid #334155;position:relative;overflow:hidden}
-.card .icon{font-size:32px;margin-bottom:8px}
-.card h2{font-size:18px;font-weight:600;margin-bottom:4px}
-.card .budget-label{font-size:12px;color:#64748b;margin-bottom:16px}
-.amounts{display:flex;justify-content:space-between;margin-bottom:12px}
-.amounts div{text-align:center}
-.amounts .label{font-size:11px;color:#94a3b8;margin-bottom:2px}
-.amounts .val{font-size:18px;font-weight:700}
-.val.budget{color:#60a5fa}
-.val.spent{color:#f87171}
-.val.remain{color:#34d399}
-.bar{height:12px;background:#334155;border-radius:6px;overflow:hidden;margin-bottom:8px}
-.bar .fill{height:100%;border-radius:6px;transition:width 1s ease}
-.fill.safe{background:linear-gradient(90deg,#22c55e,#4ade80)}
-.fill.warn{background:linear-gradient(90deg,#eab308,#facc15)}
-.fill.danger{background:linear-gradient(90deg,#ef4444,#f87171)}
-.pct{text-align:right;font-size:12px;color:#94a3b8;margin-bottom:12px}
-.detail-box{background:#0f172a;border-radius:8px;padding:10px 12px;font-size:12px;color:#94a3b8;line-height:1.8}
-.detail-box span{color:#cbd5e1}
-.detail-box .price{color:#f87171;font-weight:600;float:right}
-.total-card{grid-column:1/-1;background:linear-gradient(135deg,#1e293b,#1a2744);border:1px solid #3b5998}
-.total-bar{height:20px;background:#334155;border-radius:10px;overflow:hidden;margin:12px 0}
-.total-bar .fill{height:100%;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff}
-.footer{text-align:center;margin-top:30px;color:#475569;font-size:11px}
+.header .sub{font-size:12px;color:#64748b;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;max-width:1000px;margin:0 auto}
+.card{background:#1e293b;border-radius:14px;padding:22px;border:1px solid #334155}
+.card .icon{font-size:28px;margin-bottom:6px}
+.card h2{font-size:17px;font-weight:600;margin-bottom:3px}
+.card .sub-label{font-size:11px;color:#64748b;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;margin-bottom:10px}
+.row .item{text-align:center;flex:1}
+.row .lbl{font-size:11px;color:#94a3b8;margin-bottom:2px}
+.row .num{font-size:17px;font-weight:700}
+.n-budget{color:#60a5fa}.n-spent{color:#f87171}.n-left{color:#34d399}
+.bar{height:10px;background:#334155;border-radius:5px;overflow:hidden;margin-bottom:6px}
+.bar .fill{height:100%;border-radius:5px;transition:width 1s ease}
+.f-green{background:linear-gradient(90deg,#22c55e,#4ade80)}
+.f-yellow{background:linear-gradient(90deg,#eab308,#facc15)}
+.f-red{background:linear-gradient(90deg,#ef4444,#f87171)}
+.f-blue{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
+.pct{font-size:11px;color:#94a3b8;text-align:right;margin-bottom:10px}
+.items{background:#0f172a;border-radius:8px;padding:10px 12px;font-size:12px;line-height:2}
+.items .price{color:#f87171;font-weight:600;float:right}
+.tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;font-weight:600}
+.tag-ok{background:#14532d;color:#86efac}
+.tag-warn{background:#713f12;color:#fde047}
+.tag-danger{background:#7f1d1d;color:#fca5a5}
+.total{grid-column:1/-1;background:linear-gradient(135deg,#1e293b,#1a2744);border-color:#3b5998}
+.total .bar{height:16px;border-radius:8px}
+.total .fill{font-size:11px;font-weight:600;color:#fff;display:flex;align-items:center;justify-content:center}
+.footer{text-align:center;margin-top:24px;color:#475569;font-size:11px}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>📊 2026 年度预算看板</h1>
-<div class="sub">实时数据 · 更新于 2026-03-16</div>
+<h1>📊 2026 预算看板</h1>
+<div class="sub">更新于 2026-03-16 00:50</div>
 </div>
+
 <div class="grid">
 
 <!-- 电子产品 -->
 <div class="card">
 <div class="icon">📱</div>
 <h2>电子产品</h2>
-<div class="budget-label">年度预算</div>
-<div class="amounts">
-<div><div class="label">预算</div><div class="val budget">¥20,000</div></div>
-<div><div class="label">已花</div><div class="val spent">¥14,051</div></div>
-<div><div class="label">剩余</div><div class="val remain">¥5,949</div></div>
+<div class="sub-label">年度预算 ¥20,000</div>
+<div class="row">
+<div class="item"><div class="lbl">预算</div><div class="num n-budget">¥20,000</div></div>
+<div class="item"><div class="lbl">已花</div><div class="num n-spent">¥14,051</div></div>
+<div class="item"><div class="lbl">剩余</div><div class="num n-left">¥5,949</div></div>
 </div>
-<div class="bar"><div class="fill warn" style="width:70.3%"></div></div>
-<div class="pct">已用 70.3%</div>
-<div class="detail-box">
+<div class="bar"><div class="fill f-yellow" style="width:70.3%"></div></div>
+<div class="pct">已用 70.3% <span class="tag tag-warn">注意</span></div>
+<div class="items">
 <div>小米17 Pro 森野绿 12+256 <span class="price">¥4,999</span></div>
 <div>小米17 Pro 白色 12+256（橙子）<span class="price">¥4,999</span></div>
 <div>小米17 Pro 白色 12+256（苏苏通讯）<span class="price">¥4,053</span></div>
@@ -67,15 +70,15 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 <div class="card">
 <div class="icon">🍚</div>
 <h2>日常生活</h2>
-<div class="budget-label">年度预算</div>
-<div class="amounts">
-<div><div class="label">预算</div><div class="val budget">¥10,000</div></div>
-<div><div class="label">已花</div><div class="val remain">¥0</div></div>
-<div><div class="label">剩余</div><div class="val remain">¥10,000</div></div>
+<div class="sub-label">年度预算 ¥10,000</div>
+<div class="row">
+<div class="item"><div class="lbl">预算</div><div class="num n-budget">¥10,000</div></div>
+<div class="item"><div class="lbl">已花</div><div class="num n-left">¥0</div></div>
+<div class="item"><div class="lbl">剩余</div><div class="num n-left">¥10,000</div></div>
 </div>
-<div class="bar"><div class="fill safe" style="width:0%"></div></div>
-<div class="pct">已用 0%</div>
-<div class="detail-box">
+<div class="bar"><div class="fill f-green" style="width:0%"></div></div>
+<div class="pct">已用 0% <span class="tag tag-ok">充裕</span></div>
+<div class="items">
 <div>餐饮、日用品、出行等日常开销</div>
 <div>尚未产生消费 ✅</div>
 </div>
@@ -85,32 +88,50 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 <div class="card">
 <div class="icon">🤖</div>
 <h2>AI 订阅</h2>
-<div class="budget-label">年度预算</div>
-<div class="amounts">
-<div><div class="label">预算</div><div class="val budget">¥5,000</div></div>
-<div><div class="label">已花</div><div class="val remain">¥0</div></div>
-<div><div class="label">剩余</div><div class="val remain">¥5,000</div></div>
+<div class="sub-label">年度预算 ¥5,000</div>
+<div class="row">
+<div class="item"><div class="lbl">预算</div><div class="num n-budget">¥5,000</div></div>
+<div class="item"><div class="lbl">已花</div><div class="num n-left">¥0</div></div>
+<div class="item"><div class="lbl">剩余</div><div class="num n-left">¥5,000</div></div>
 </div>
-<div class="bar"><div class="fill safe" style="width:0%"></div></div>
-<div class="pct">已用 0%</div>
-<div class="detail-box">
+<div class="bar"><div class="fill f-green" style="width:0%"></div></div>
+<div class="pct">已用 0% <span class="tag tag-ok">充裕</span></div>
+<div class="items">
 <div>各类 AI 工具及服务订阅</div>
 <div>尚未产生消费 ✅</div>
 </div>
 </div>
 
+<!-- 旅游+数码合并 -->
+<div class="card">
+<div class="icon">✈️</div>
+<h2>旅游 + 数码（合并）</h2>
+<div class="sub-label">年度预算 ¥15,000</div>
+<div class="row">
+<div class="item"><div class="lbl">预算</div><div class="num n-budget">¥15,000</div></div>
+<div class="item"><div class="lbl">已花</div><div class="num n-spent">¥14,051</div></div>
+<div class="item"><div class="lbl">剩余</div><div class="num n-spent">¥949</div></div>
+</div>
+<div class="bar"><div class="fill f-red" style="width:93.7%"></div></div>
+<div class="pct">已用 93.7% <span class="tag tag-danger">危险</span></div>
+<div class="items">
+<div>数码类总支出（3台小米17 Pro）<span class="price">¥14,051</span></div>
+<div>仅剩 ¥949 可用于旅游 💸</div>
+</div>
+</div>
+
 <!-- 汇总 -->
-<div class="card total-card">
+<div class="card total">
 <h2>💰 年度预算汇总</h2>
-<div class="amounts">
-<div><div class="label">总预算</div><div class="val budget">¥35,000</div></div>
-<div><div class="label">总已花</div><div class="val spent">¥14,051</div></div>
-<div><div class="label">总剩余</div><div class="val remain">¥20,949</div></div>
+<div class="row">
+<div class="item"><div class="lbl">总预算</div><div class="num n-budget">¥50,000</div></div>
+<div class="item"><div class="lbl">总已花</div><div class="num n-spent">¥14,051</div></div>
+<div class="item"><div class="lbl">总剩余</div><div class="num n-left">¥35,949</div></div>
 </div>
-<div class="total-bar">
-<div class="fill" style="width:40.1%;background:linear-gradient(90deg,#3b82f6,#60a5fa)">40.1%</div>
+<div class="bar"><div class="fill f-blue" style="width:28.1%">28.1%</div></div>
+<div style="font-size:12px;color:#64748b;text-align:center;margin-top:6px">
+电子产品 + 旅游+数码 已花 ¥14,051 · 日常生活与 AI 订阅尚未启动
 </div>
-<div style="font-size:12px;color:#64748b;text-align:center">电子产品已花 ¥14,051 / ¥20,000 · 日常与 AI 订阅尚未启动</div>
 </div>
 
 </div>
